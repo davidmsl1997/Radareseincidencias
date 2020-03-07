@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alerts</string>
+    <!-- REGISTRO -->
+    <string name="usuario">User name</string>
+    <string name="name">Name</string>
+    <string name="surname1">Primary last name</string>
+    <string name="surname2">Second last name</string>
+    <string name="email">Email</string>
+    <string name="pwd2">Repeat passwrod</string>
+    <string name="personal_data">Personal data</string>
+    <string name="user_data">User data</string>
+    <string name="send">Send</string>
+    <string name="longitud_pwd">The password must have, at least, six characters.</string>
+    <string name="comparacion_pwd">The passwords doesn\'t coincide.</string>
+    <string name="formato_email">The email must have a valid format.</string>
+    <string name="usuario_repetido1">The user</string>
+    <string name="usuario_repetido2">already exists.</string>
+
+    <!-- PANTALLA PRINCIPAL-->
+    <string name="email_hint">Email</string>
+    <string name="pwd">Password</string>
+    <string name="login">Log in</string>
+    <string name="nueva_cuenta">Create an account</string>
+    <string name="olvida_pwd">Forgotten password</string>
+    <string name="fallo_inicio">Incorrect username or password.</string>
+    <string name="fallo_email_vacio">Email field is empty.</string>
+    <string name="fallo_passw_vacia">Password field is empty.</string>
+    <string name="fallo_verificacion">The email is not verified</string>
+    <string name="exit">Press the return button again for exit..</string>
+    <string name="radar1">Radar limited to </string>
+    <string name="radar2"> Km/h to </string>
+    <string name="radar3"> meters.</string>
+    <string name="alerta1">Alert to </string>
+    <string name="alerta2"> meters for </string>
+    <string name="alerta3"> in </string>
+
+    <!-- MAPA DE INCIDENCIAS -->
+    <string name="titulo_mapa">Incident map</string>
+
+    <!-- MENÚ -->
+    <string name="verPerfil">View profile</string>
+    <string name="logOut">Log out</string>
+    <string name="removeUser">Delete account</string>
+    <string name="configuracion">Configuration</string>
+    <string name="vista_satelite">Satellite view</string>
+    <string name="vista_nocturna">Night mode</string>
+
+    <!-- CONFIGURAR ALERTAS -->
+    <string name="guardar">Save</string>
+
+    <!-- VER PERFIL -->
+    <string name="profile">My profile</string>
+    <string name="reputation">Reputation</string>
+    <string name="resumen_incidencias">Incorrect username or password</string>
+    <string name="accidentes">Car accidents: </string>
+    <string name="trafico">Traffic: </string>
+    <string name="radares">Radars: </string>
+    <string name="obras">Works: </string>
+    <string name="callesCortadas">Street cut: </string>
+    <string name="policia">Police: </string>
+    <string name="animales">Animals: </string>
+    <string name="nieve">Snow: </string>
+    <string name="lluvia">Rain: </string>
+    <string name="asfalto">Asphalt: </string>
+
+    <!-- RECUPERAR PWD-->
+    <string name="recuperar_pwd">Enter your email and we will send you a mail for recover your password.</string>
+    <string name="recuperar_pwd_title">Recover password</string>
+    <string name="email_vacio">Enter your email for recover your password.</string>
+    <string name="email_error">There is no account associated with the email </string>
+    <string name="recuperar_pwd_mail_enviado">The email has been sent to the indicated account</string>
+    <string name="recuperar_pwd_mail_error">There was an error sending mail to the specified account.</string>
+    <string name="editarFoto_Perfil">Edit</string>
+    <string name="cancelar">Cancel</string>
+
+    <!-- ELIMINAR CUENTA -->
+    <string name="title_delete_account">Delete account</string>
+    <string name="ask_delete_account">Are you sure you want to delete your account?</string>
+    <string name="ask_delete_data">If you delete your account, all your data will be deleted.</string>
+    <string name="continue_button">Continue</string>
+    <string name="user_error">There was an error deleting the user from the system.</string>
+    <string name="data_error">There was an error deleting the user data.</string>
+
+    <!-- CUADRO DE DIÁLOGO DE LAS INCIDENCIAS -->
+    <string name="calle">Street:</string>
+    <string name="usuario_incidencia">User:</string>
+    <string name="velocidad">Speed:</string>
+    <string name="boton_aceptar">Acept</string>
+
+    <!--CUADRO DE DIÁLOGO DE OTRAS INCIDENCIAS -->
+    <string name="otras_incidencias">Other incidences</string>
+
+    <!--CUADRO DE DIÁLOGO DE REPORTAR RADAR -->
+    <string name="velocidad_radar">Speed</string>
+
+    <!-- RANKING -->
+    <string name="ranking_title">Ranking</string>
+</resources>

@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controladores.PerfilActivity">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"></android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_perfil">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="144dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvPerfilName"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform"
+                app:fontFamily="casual"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPerfilSurname"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="2sp"
+                app:fontFamily="casual"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivProfile"
+                app:layout_constraintTop_toBottomOf="@+id/tvPerfilName" />
+
+            <TextView
+                android:id="@+id/tvPerfilUserName"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="2sp"
+                app:fontFamily="casual"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivProfile"
+                app:layout_constraintTop_toBottomOf="@+id/tvPerfilEmail" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#CECECE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfile" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#CECECE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectanguloReputation" />
+
+            <ImageView
+                android:id="@+id/rectanguloReputation"
+                android:layout_width="170dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/rectangle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+
+            <ImageView
+                android:id="@+id/rectanguloRanking"
+                android:layout_width="170dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/rectangle"
+                app:layout_constraintBottom_toBottomOf="@+id/rectanguloReputation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/tvReputationTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/reputation"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:fontFamily="casual"
+                app:layout_constraintEnd_toEndOf="@+id/rectanguloReputation"
+                app:layout_constraintStart_toStartOf="@+id/rectanguloReputation"
+                app:layout_constraintTop_toTopOf="@+id/rectanguloReputation" />
+
+            <TextView
+                android:id="@+id/tvReputation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="0 pts."
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:fontFamily="casual"
+                app:layout_constraintBottom_toBottomOf="@+id/rectanguloReputation"
+                app:layout_constraintEnd_toEndOf="@+id/rectanguloReputation"
+                app:layout_constraintStart_toStartOf="@+id/rectanguloReputation"
+                app:layout_constraintTop_toBottomOf="@+id/tvReputationTitle" />
+
+            <TextView
+                android:id="@+id/tvRanking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="1"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:fontFamily="casual"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvReputation"
+                app:layout_constraintEnd_toEndOf="@+id/rectanguloRanking"
+                app:layout_constraintStart_toStartOf="@+id/rectanguloRanking" />
+
+            <TextView
+                android:id="@+id/tvRankingTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Ranking"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:fontFamily="casual"
+                app:layout_constraintEnd_toEndOf="@+id/rectanguloRanking"
+                app:layout_constraintStart_toStartOf="@+id/rectanguloRanking"
+                app:layout_constraintTop_toTopOf="@+id/rectanguloRanking" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:stretchColumns="0,1"
+
+                app:layout_constraintTop_toBottomOf="@+id/tvResumenTtile"
+
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TableRow>
+                    <android.support.constraint.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/rectanguloAccidentes"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivAccidentes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/rectanguloAccidentes"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloAccidentes"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloAccidentes"
+                            app:srcCompat="@drawable/accidente_56" />
+
+                        <TextView
+                            android:id="@+id/tvAccidentesTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/accidentes"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="@+id/rectanguloAccidentes"
+                            app:layout_constraintStart_toEndOf="@+id/ivAccidentes"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloAccidentes" />
+
+                        <TextView
+                            android:id="@+id/tvCuentaAccidentes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="0"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloAccidentes"
+                            app:layout_constraintStart_toEndOf="@+id/tvAccidentesTitle"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloAccidentes" />
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+                    <android.support.constraint.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/rectanguloTrafico"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivTrafico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/rectanguloTrafico"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloTrafico"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloTrafico"
+                            app:srcCompat="@drawable/desfile_de_coches_56" />
+
+                        <TextView
+                            android:id="@+id/tvTrafico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/trafico"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="@+id/rectanguloTrafico"
+                            app:layout_constraintStart_toEndOf="@+id/ivTrafico"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloTrafico" />
+
+                        <TextView
+                            android:id="@+id/tvCuentaTrafico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="0"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloTrafico"
+                            app:layout_constraintStart_toEndOf="@+id/tvTrafico"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloTrafico" />
+                    </android.support.constraint.ConstraintLayout>
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+                    <android.support.constraint.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/rectanguloRadares"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivRadares"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloRadares"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloRadares"
+                            app:srcCompat="@drawable/radar_56" />
+
+                        <TextView
+                            android:id="@+id/tvRadares"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/radares"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivRadares"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloRadares" />
+
+                        <TextView
+                            android:id="@+id/tvCuentaRadares"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="0"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloRadares"
+                            app:layout_constraintStart_toEndOf="@+id/tvRadares"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+                    <android.support.constraint.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/rectanguloObras"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivObras"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloObras"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloObras"
+                            app:srcCompat="@drawable/obras_original_56" />
+
+                        <TextView
+                            android:id="@+id/tvObras"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/obras"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivObras"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloObras" />
+
+                        <TextView
+                            android:id="@+id/tvCuentaObras"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="0"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloObras"
+                            app:layout_constraintStart_toEndOf="@+id/tvObras"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+                    <android.support.constraint.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/rectanguloCallesCortadas"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivCallesCortadas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloCallesCortadas"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloCallesCortadas"
+                            app:srcCompat="@drawable/calle_cortada_56" />
+
+                        <TextView
+                            android:id="@+id/tvCallesCortadas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/callesCortadas"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivCallesCortadas"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloCallesCortadas" />
+
+                        <TextView
+                            android:id="@+id/tvCuentaCalleCortada"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="0"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloCallesCortadas"
+                            app:layout_constraintStart_toEndOf="@+id/tvCallesCortadas"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+                    <android.support.constraint.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/rectanguloPolicia"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivPolicia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloPolicia"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloPolicia"
+                            app:srcCompat="@drawable/policia_56" />
+
+                        <TextView
+                            android:id="@+id/tvPolicia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/policia"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivPolicia"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloPolicia" />
+
+                        <TextView
+                            android:id="@+id/tvCuentaPolicia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="0"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloPolicia"
+                            app:layout_constraintStart_toEndOf="@+id/tvPolicia"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+                    <android.support.constraint.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/rectanguloAnimales"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivAnimales"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloAnimales"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloAnimales"
+                            app:srcCompat="@drawable/animales_56" />
+
+                        <TextView
+                            android:id="@+id/tvAnimales"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/animales"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAnimales"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloAnimales" />
+
+                        <TextView
+                            android:id="@+id/tvCuentaAnimales"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="0"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloAnimales"
+                            app:layout_constraintStart_toEndOf="@+id/tvAnimales"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+                    <android.support.constraint.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/rectanguloNieve"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivNieve"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloNieve"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloNieve"
+                            app:srcCompat="@drawable/nieve_56" />
+
+                        <TextView
+                            android:id="@+id/tvNieve"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/nieve"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivNieve"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloNieve" />
+
+                        <TextView
+                            android:id="@+id/tvCuentaNieve"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="0"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloNieve"
+                            app:layout_constraintStart_toEndOf="@+id/tvNieve"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+                    <android.support.constraint.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/rectanguloLluvia"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivLluvia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloLluvia"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloLluvia"
+                            app:srcCompat="@drawable/lluvia_56" />
+
+                        <TextView
+                            android:id="@+id/tvLluvia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/lluvia"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivLluvia"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloLluvia" />
+
+                        <TextView
+                            android:id="@+id/tvCuentaLluvia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="0"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloLluvia"
+                            app:layout_constraintStart_toEndOf="@+id/tvLluvia"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp" android:layout_marginBottom="8dp">
+                    <android.support.constraint.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/rectanguloAsfalto"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivAsfalto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloAsfalto"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloAsfalto"
+                            app:srcCompat="@drawable/bache_56" />
+
+                        <TextView
+                            android:id="@+id/tvAsfalto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/asfalto"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivAsfalto"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloAsfalto" />
+
+                        <TextView
+                            android:id="@+id/tvCuentaAsfalto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="0"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloAsfalto"
+                            app:layout_constraintStart_toEndOf="@+id/tvAsfalto"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvResumenTtile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/resumen_incidencias"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:fontFamily="casual"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/tvPerfilEmail"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeStepGranularity="2sp"
+                app:fontFamily="casual"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivProfile"
+                app:layout_constraintTop_toBottomOf="@+id/tvPerfilSurname" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                style="@android:style/Widget.Holo.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="editImage"
+                app:layout_constraintBottom_toBottomOf="@+id/ivProfile"
+                app:layout_constraintEnd_toEndOf="@+id/ivProfile"
+                app:srcCompat="@drawable/ic_mode_edit_black_24dp" />
+                </android.support.constraint.ConstraintLayout>
+
+            </ScrollView>
+</android.support.constraint.ConstraintLayout>

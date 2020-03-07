@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">Alertas</string>
+    <!-- REGISTRO -->
+    <string name="usuario">Nombre de usuario</string>
+    <string name="name">Nombre</string>
+    <string name="surname1">Primer apellido</string>
+    <string name="surname2">Segundo apellido</string>
+    <string name="email">Email</string>
+    <string name="pwd2">Repita la contraseña</string>
+    <string name="personal_data">Datos personales</string>
+    <string name="user_data">Datos de usuario</string>
+    <string name="send">Enviar</string>
+    <string name="longitud_pwd">La contraseña debe tener, al menos, seis caracteres.</string>
+    <string name="comparacion_pwd">Las contraseñas no coinciden.</string>
+    <string name="formato_email">El email debe tener un formato válido.</string>
+    <string name="usuario_repetido1">El usuario</string>
+    <string name="usuario_repetido2">ya existe.</string>
+
+    <!-- PANTALLA PRINCIPAL-->
+    <string name="email_hint"> Correo electrónico </string>
+    <string name="pwd">Contraseña</string>
+    <string name="login">Entrar</string>
+    <string name="nueva_cuenta">Crearme una cuenta</string>
+    <string name="olvida_pwd">He olvidado mi contraseña</string>
+    <string name="fallo_inicio">Usuario o contraseña incorrectos.</string>
+    <string name="fallo_email_vacio">El campo del email está vacío.</string>
+    <string name="fallo_passw_vacia">El campo de la contrasña está vacío.</string>
+    <string name="fallo_verificacion">El email introducido no está verificado.</string>
+    <string name="exit">Para salir de la aplicación pulse de nuevo el botón de retorno.</string>
+    <string name="radar1">Radar limitado a </string>
+    <string name="radar2"> Km/h a </string>
+    <string name="radar3"> metros.</string>
+    <string name="alerta1">Alerta a </string>
+    <string name="alerta2"> metros por </string>
+    <string name="alerta3"> en </string>
+
+    <!-- MAPA DE INCIDENCIAS -->
+    <string name="titulo_mapa">Mapa de incidencias</string>
+
+    <!-- MENÚ -->
+    <string name="verPerfil">Ver perfil</string>
+    <string name="logOut">Cerrar sesión</string>
+    <string name="removeUser">Eliminar cuenta</string>
+    <string name="configuracion">Configuración</string>
+    <string name="vista_satelite">Vista satélite</string>
+    <string name="vista_nocturna">Modo noche</string>
+
+    <!-- CONFIGURAR ALERTAS -->
+    <string name="guardar">Guardar</string>
+
+    <!-- VER PERFIL -->
+    <string name="profile">Mi perfil</string>
+    <string name="reputation">Reputación</string>
+    <string name="resumen_incidencias">Resumen de incidencias reportadas</string>
+    <string name="accidentes">Accidentes: </string>
+    <string name="trafico">Tráfico: </string>
+    <string name="radares">Radares: </string>
+    <string name="obras">Obras: </string>
+    <string name="callesCortadas">Calles cortadas: </string>
+    <string name="policia">Policía: </string>
+    <string name="animales">Animales: </string>
+    <string name="nieve">Nieve: </string>
+    <string name="lluvia">Lluvia: </string>
+    <string name="asfalto">Asfalto: </string>
+
+    <!-- RECUPERAR PWD-->
+    <string name="recuperar_pwd">Introduzca su email y se le enviará un correo para recuperar la contraseña</string>
+    <string name="recuperar_pwd_title">Recuperar contraseña</string>
+    <string name="email_vacio">Introduzca su email para recuperar su contraseña.</string>
+    <string name="email_error">No existe ninguna cuenta asociada al correo </string>
+    <string name="recuperar_pwd_mail_enviado">El email se ha enviado a la cuenta indicada</string>
+    <string name="recuperar_pwd_mail_error">Ha habido un error al enviar el email a la cuenta especificada.</string>
+    <string name="editarFoto_Perfil">Editar</string>
+    <string name="cancelar">Cancelar</string>
+
+    <!-- ELIMINAR CUENTA -->
+    <string name="title_delete_account">Eliminar cuenta</string>
+    <string name="ask_delete_account">¿Está seguro de que desea eliminar su cuenta?</string>
+    <string name="ask_delete_data">Al eliminar su cuenta se eliminarán todos sus datos.</string>
+    <string name="continue_button">Continuar</string>
+    <string name="user_error">Ha habido un error al eliminar del sistema al usuario.</string>
+    <string name="data_error">Ha ocurrido un error al eliminar los datos del usuario.</string>
+
+    <!-- CUADRO DE DIÁLOGO DE LAS INCIDENCIAS -->
+    <string name="calle">Calle:</string>
+    <string name="usuario_incidencia">Usuario:</string>
+    <string name="velocidad">Velocidad:</string>
+    <string name="boton_aceptar">Aceptar</string>
+
+    <!--CUADRO DE DIÁLOGO DE OTRAS INCIDENCIAS -->
+    <string name="otras_incidencias">Otras incidencias</string>
+
+    <!--CUADRO DE DIÁLOGO DE REPORTAR RADAR -->
+    <string name="velocidad_radar">Velocidad</string>
+
+    <!-- RANKING -->
+    <string name="ranking_title">Ranking</string>
+</resources>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controladores.RankingActivity">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar_ranking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"></android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_ranking">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:stretchColumns="0,1"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/tvResumenTtile">
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <android.support.constraint.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/rectanguloR1"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivPrimero"
+                            android:layout_width="56dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/rectanguloR1"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloR1"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR1" />
+
+                        <TextView
+                            android:id="@+id/tvUserName1"
+                            android:layout_width="0dp"
+                            android:layout_height="28dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="@+id/rectanguloR1"
+                            app:layout_constraintEnd_toStartOf="@+id/tvPuntoUser1"
+                            app:layout_constraintStart_toEndOf="@+id/ivPrimero"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR1" />
+
+                        <TextView
+                            android:id="@+id/tvPuntoUser1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloR1"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR1" />
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <android.support.constraint.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/rectanguloR2"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivSegundo"
+                            android:layout_width="56dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/rectanguloR2"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloR2"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR2"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/tvUserName2"
+                            android:layout_width="0dp"
+                            android:layout_height="28dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="@+id/rectanguloR2"
+                            app:layout_constraintEnd_toStartOf="@+id/tvPuntoUser2"
+                            app:layout_constraintStart_toEndOf="@+id/ivSegundo"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR2" />
+
+                        <TextView
+                            android:id="@+id/tvPuntoUser2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloR2"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR2" />
+                    </android.support.constraint.ConstraintLayout>
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <android.support.constraint.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/rectanguloR3"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivTercero"
+                            android:layout_width="56dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloR3"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR3" />
+
+                        <TextView
+                            android:id="@+id/tvUserName3"
+                            android:layout_width="0dp"
+                            android:layout_height="28dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/tvPuntoUser3"
+                            app:layout_constraintStart_toEndOf="@+id/ivTercero"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR3" />
+
+                        <TextView
+                            android:id="@+id/tvPuntoUser3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloR3"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <android.support.constraint.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/rectanguloR4"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivCuarto"
+                            android:layout_width="56dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:autoSizeMaxTextSize="100sp"
+                            app:autoSizeMinTextSize="12sp"
+                            app:autoSizeStepGranularity="2sp"
+                            app:autoSizeTextType="uniform"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloR4"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR4" />
+
+                        <TextView
+                            android:id="@+id/tvUserName4"
+                            android:layout_width="0dp"
+                            android:layout_height="28dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/tvPuntoUser4"
+                            app:layout_constraintStart_toEndOf="@+id/ivCuarto"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR4" />
+
+                        <TextView
+                            android:id="@+id/tvPuntoUser4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloR4"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <android.support.constraint.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/rectanguloR5"
+                            android:layout_width="match_parent"
+                            android:layout_height="107dp"
+                            android:src="@drawable/rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivQuinto"
+                            android:layout_width="56dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/rectanguloR5"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR5" />
+
+                        <TextView
+                            android:id="@+id/tvUserName5"
+                            android:layout_width="0dp"
+                            android:layout_height="28dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="24sp"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/tvPuntoUser5"
+                            app:layout_constraintStart_toEndOf="@+id/ivQuinto"
+                            app:layout_constraintTop_toTopOf="@+id/rectanguloR5" />
+
+                        <TextView
+                            android:id="@+id/tvPuntoUser5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:fontFamily="casual"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/rectanguloR5"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+                </TableRow>
+            </TableLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

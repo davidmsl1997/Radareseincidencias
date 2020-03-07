@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "324218661966",
+    "firebase_url": "https://radareseincidencias.firebaseio.com",
+    "project_id": "radareseincidencias",
+    "storage_bucket": "radareseincidencias.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324218661966:android:bf02110b4da50030",
+        "android_client_info": {
+          "package_name": "com.example.david.radareseincidencias"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324218661966-roe495227asqt296oiigvn0u2jhg8cn5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.david.radareseincidencias",
+            "certificate_hash": "53a2ebc82d6ce8b08427f1ebcf45e697815b78f1"
+          }
+        },
+        {
+          "client_id": "324218661966-858n8nqai5h6cnra3sc9jcdlhdqfgfa2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDCwVMut46d-U-trpP5E6VuXHxD9gD2Q4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324218661966-858n8nqai5h6cnra3sc9jcdlhdqfgfa2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
