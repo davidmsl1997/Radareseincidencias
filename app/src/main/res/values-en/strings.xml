@@ -52,7 +52,7 @@
     <!-- VER PERFIL -->
     <string name="profile">My profile</string>
     <string name="reputation">Reputation</string>
-    <string name="resumen_incidencias">Incorrect username or password</string>
+    <string name="resumen_incidencias">Incidents summary</string>
     <string name="accidentes">Car accidents: </string>
     <string name="trafico">Traffic: </string>
     <string name="radares">Radars: </string>
