@@ -42,11 +42,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*PIDE PERMISOS DE LOCALIZACIÓN*/
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-
+            //SI NO LOS TIENE SALE DE LA APP -> MEJOR PONER UN RECUADRO PREGUNTANDO SI SE ESTÁ SEGURO Y PEDIR DE NUEVO O NO LOS PERMISOS EN FUNCIÓN DE LA RESPUESTA
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 System.exit(0);
             }
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             window.setStatusBarColor(getResources().getColor(R.color.mainActivityBackgroundColor));
         }
 
+        //Igual se puede hacer desde la interfaz -> icono de la app
         iv = findViewById(R.id.ivIcono);
         iv.setImageResource(R.drawable.icono_app);
 
@@ -89,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         email = user.getText().toString();
         password = pwd.getText().toString();
 
+        /*PONER LOS CAMPOS EN ROJO Y EL MENSAJE DE ERROR DEBAJO*/
         if (email.equals("")){
             Toast.makeText(MainActivity.this,  R.string.fallo_email_vacio, Toast.LENGTH_SHORT).show();
             return;
@@ -112,14 +115,14 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(MainActivity.this,  R.string.fallo_inicio, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        /*MIRA EN BASE DE DATOS*/
+                            //Existe el usuario -> Contraseña incorrecta
+                            //No existe el usuario -> Usuario o contraseña incorrectos (para no dar información)
+                        Toast.makeText(MainActivity.this,  R.string.fallo_inicio, Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     public void registro(View view){
