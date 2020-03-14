@@ -42,11 +42,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //PIDE LOS PERMISOS DE ACCESO A LA LOCALIZACIÓN
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-
+            //Si no los tiene, sale -> Sería mejor mostrar un cuadro preguntando si está seguro y volverlos a pedir o salir en función de la respuesta
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 System.exit(0);
             }
@@ -55,9 +57,10 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(getResources().getColor(R.color.mainActivityBackgroundColor));
+            window.setStatusBarColor(getResources().getColor(R.color.mainActivityBackgroundColor)); /*La barra de notificaciones*/
         }
 
+        //Esto igual se puede poner desde la interfaz y sobra -> El icono de la app en la pantalla
         iv = findViewById(R.id.ivIcono);
         iv.setImageResource(R.drawable.icono_app);
 
