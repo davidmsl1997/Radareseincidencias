@@ -6,4 +6,6 @@
     <color name="colorAccent">#848481</color>
     <color name="mainActivityBackgroundColor">#FFFCBD</color>
     <color name="Warnings">#fd0303</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
 </resources>

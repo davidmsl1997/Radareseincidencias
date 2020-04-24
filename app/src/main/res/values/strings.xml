@@ -56,7 +56,7 @@
     <!-- VER PERFIL -->
     <string name="profile">Mi perfil</string>
     <string name="reputation">Reputación</string>
-    <string name="resumen_incidencias">Resumen de incidencias reportadas</string>
+    <string name="resumen_incidencias">Resumen de incidencias</string>
     <string name="accidentes">Accidentes: </string>
     <string name="trafico">Tráfico: </string>
     <string name="radares">Radares: </string>
