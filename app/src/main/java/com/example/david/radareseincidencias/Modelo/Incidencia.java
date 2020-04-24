@@ -15,6 +15,7 @@ public class Incidencia {
     public double latitud;
     public double longitud;
     public Integer velocidad; //Solo para los radares
+    public Integer cuentaEliminado;
 
     public Incidencia(String tipo, String usuario, String calle, double latitud, double longitud){
         this.tipo = tipo;
@@ -26,6 +27,7 @@ public class Incidencia {
         this.fecha = formatter.format(date);
         this.latitud = latitud;
         this.longitud = longitud;
+        this.cuentaEliminado = 0;
 
         this.velocidad = null;
     }
@@ -40,6 +42,7 @@ public class Incidencia {
         this.fecha = formatter.format(date);
         this.latitud = latitud;
         this.longitud = longitud;
+        this.cuentaEliminado = 0;
 
         this.velocidad = velocidad;
     }

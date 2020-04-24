@@ -8,156 +8,176 @@
     tools:context=".Controladores.RegistroActivity">
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="360dp"
+        android:layout_height="640dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
-                android:id="@+id/IDPwd"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:hint="@string/pwd"
-                android:inputType="textPassword"
+                android:layout_marginTop="13dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IDUser" />
+                app:layout_constraintTop_toBottomOf="@+id/til_user">
 
-            <EditText
-                android:id="@+id/IDEmail"
+                <EditText
+                    android:id="@+id/IDPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/pwd"
+                    android:inputType="textPassword"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="413dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:hint="@string/email"
-                android:inputType="textPersonName"
+                android:layout_marginTop="13dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvDatosUsuario" />
+                app:layout_constraintTop_toBottomOf="@+id/tvDatosUsuario">
+
+                <EditText
+                    android:id="@+id/IDEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="57dp"
+                    tools:layout_editor_absoluteY="302dp" />
+            </android.support.design.widget.TextInputLayout>
+
 
             <Button
                 android:id="@+id/button3"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
                 android:onClick="registro"
                 android:text="@string/send"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IDPwd2" />
+                app:layout_constraintTop_toBottomOf="@+id/til_pwd2" />
 
-            <EditText
-                android:id="@+id/IDUser"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:hint="@string/usuario"
-                android:inputType="textPersonName"
+                android:layout_marginTop="13dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IDEmail" />
+                app:layout_constraintTop_toBottomOf="@+id/til_email">
 
-            <EditText
-                android:id="@+id/IDName"
+                <EditText
+                    android:id="@+id/IDUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/usuario"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="359dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:hint="@string/name"
-                android:inputType="textPersonName"
+                android:layout_marginTop="13dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvDatosPersonales" />
+                app:layout_constraintTop_toBottomOf="@+id/tvDatosPersonales">
 
-            <EditText
-                android:id="@+id/IDSurname1"
+                <EditText
+                    android:id="@+id/IDName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/name"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="80dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_surname1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:hint="@string/surname1"
-                android:inputType="textPersonName"
+                android:layout_marginTop="13dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IDName" />
+                app:layout_constraintTop_toBottomOf="@+id/til_nombre">
 
-            <EditText
-                android:id="@+id/IDSurname2"
+                <EditText
+                    android:id="@+id/IDSurname1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/surname1"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="134dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_surname2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:hint="@string/surname2"
-                android:inputType="textPersonName"
+                android:layout_marginTop="13dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IDSurname1" />
+                app:layout_constraintTop_toBottomOf="@+id/til_surname1">
 
-            <EditText
-                android:id="@+id/IDPwd2"
+                <EditText
+                    android:id="@+id/IDSurname2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/surname2"
+                    android:inputType="textPersonName"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="188dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_pwd2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:hint="@string/pwd2"
-                android:inputType="textPassword"
+                android:layout_marginTop="13dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IDPwd" />
+                app:layout_constraintTop_toBottomOf="@+id/til_pwd">
+
+                <EditText
+                    android:id="@+id/IDPwd2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/pwd2"
+                    android:inputType="textPassword"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="467dp" />
+            </android.support.design.widget.TextInputLayout>
 
             <TextView
                 android:id="@+id/tvDatosPersonales"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/personal_data"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -168,16 +188,11 @@
                 android:id="@+id/tvDatosUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
                 android:text="@string/user_data"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IDSurname2" />
+                app:layout_constraintTop_toBottomOf="@+id/til_surname2" />
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

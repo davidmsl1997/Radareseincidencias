@@ -16,6 +16,10 @@
     <string name="formato_email">The email must have a valid format.</string>
     <string name="usuario_repetido1">The user</string>
     <string name="usuario_repetido2">already exists.</string>
+    <string name="fallo_usuario">User field is required</string>
+    <string name="fallo_surname1">Primary last name is required</string>
+    <string name="fallo_surname2">Second last name is required</string>
+    <string name="fallo_email">Email field is required</string>
 
     <!-- PANTALLA PRINCIPAL-->
     <string name="email_hint">Email</string>
@@ -25,7 +29,9 @@
     <string name="olvida_pwd">Forgotten password</string>
     <string name="fallo_inicio">Incorrect username or password.</string>
     <string name="fallo_email_vacio">Email field is empty.</string>
+    <string name="fallo_email_incorrecto">Incorrect email field.</string>
     <string name="fallo_passw_vacia">Password field is empty.</string>
+    <string name="fallo_passw_incorrecta">Invalid password</string>
     <string name="fallo_verificacion">The email is not verified</string>
     <string name="exit">Press the return button again for exit..</string>
     <string name="radar1">Radar limited to </string>

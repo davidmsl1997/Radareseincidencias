@@ -71,6 +71,7 @@ public class RegistroActivity extends AppCompatActivity {
         password = tvPwd.getText().toString();
         password2 = tvPwd2.getText().toString();
 
+        /*Hacer un metodo que sea validar contraseña*/
         if (password.length() < 6){
             Toast.makeText(RegistroActivity.this, R.string.longitud_pwd, Toast.LENGTH_SHORT).show();
             tvPwd.setBackgroundColor(Color.RED);
@@ -82,7 +83,7 @@ public class RegistroActivity extends AppCompatActivity {
             tvPwd2.setBackgroundColor(Color.RED);
             flag_salida = 1;
         }
-
+        /*Llamar al método validar email*/
         if (!email.contains("@")){
             Toast.makeText(RegistroActivity.this, R.string.formato_email, Toast.LENGTH_SHORT).show();
             tvCorreo.setBackgroundColor(Color.RED);
@@ -92,7 +93,7 @@ public class RegistroActivity extends AppCompatActivity {
         if (flag_salida == 1) {
             return;
         }
-
+        /*VALIDAR TODOS LOS CAMPOS OBLIGATORIOS DEL FORMULARIO*/
         DatabaseReference ref = dataBase.getReference("/database/userData");
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

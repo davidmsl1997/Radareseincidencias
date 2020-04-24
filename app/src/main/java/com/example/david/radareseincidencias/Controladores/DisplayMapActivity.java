@@ -93,7 +93,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class DisplayMapActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, TextToSpeech.OnInitListener {//}, ValueEventListener {
+public class DisplayMapActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, TextToSpeech.OnInitListener, GoogleMap.OnMarkerDragListener {
     /*PARA EL MAPA*/
     private MapView mapView;
     private GoogleMap gmap;
@@ -138,6 +138,10 @@ public class DisplayMapActivity extends AppCompatActivity implements OnMapReadyC
 
     /*PARA EL PROGRESS BAR*/
     private AlertDialog dialog_progressBar;
+
+    /*PARA EL DOBLE CLICK DE LOS MARCADORES*/
+    private Date clickOneTime;
+    private String markerClickID;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
@@ -839,6 +843,7 @@ public class DisplayMapActivity extends AppCompatActivity implements OnMapReadyC
                     LatLng point = new LatLng(latitud, longitud);
                     MarkerOptions marker = new MarkerOptions();
                     marker.position(point);
+                    marker.draggable(true);
                     String velocidad = "0";
                     if (tipo.equals("Radar")){
                         velocidad = ds.child("velocidad").getValue().toString();
@@ -1381,5 +1386,20 @@ public class DisplayMapActivity extends AppCompatActivity implements OnMapReadyC
                 Log.e("ERRORDATO", "Error!", databaseError.toException());
             }
         });
+    }
+
+    @Override
+    public void onMarkerDragStart(Marker marker) {
+        Log.d("PULSACIONLARGA", "Se ha seleccionado un elemento");
+    }
+
+    @Override
+    public void onMarkerDrag(Marker marker) {
+
+    }
+
+    @Override
+    public void onMarkerDragEnd(Marker marker) {
+
     }
 }

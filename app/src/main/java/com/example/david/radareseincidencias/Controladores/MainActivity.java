@@ -4,11 +4,14 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.david.radareseincidencias.R;
+import com.example.david.radareseincidencias.Validador.Validador;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -32,15 +36,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
+import org.w3c.dom.Text;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MainActivity extends AppCompatActivity{
     private TextView user, pwd;
     private FirebaseAuth mAuth;
-    private static String email, password;
-    private ImageView iv;
     private ProgressBar progressBar;
+    protected static MainActivity instance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        instance = this;
         setContentView(R.layout.activity_main);
         /*PIDE PERMISOS DE LOCALIZACIÓN*/
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
@@ -60,12 +69,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Igual se puede hacer desde la interfaz -> icono de la app
-        iv = findViewById(R.id.ivIcono);
+        ImageView iv = findViewById(R.id.ivIcono);
         iv.setImageResource(R.drawable.icono_app);
 
         /*SI EL USUARIO ANTERIOR NO HABIA CERRADO SESION, NO TIENE QUE VOLVER A INICIAR*/
-        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        if (firebaseUser != null) {
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
             Intent intent = new Intent(MainActivity.this, DisplayMapActivity.class);
             startActivity(intent);
         }
@@ -85,44 +93,77 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        int flag = 0;
+        final TextInputLayout tilEmail = findViewById(R.id.til_email);
+        final TextInputLayout tilPwd = findViewById(R.id.til_pwd);
+        Map <String, TextInputLayout> errors = new HashMap<>();
         progressBar.setVisibility(View.VISIBLE);
 
-        email = user.getText().toString();
-        password = pwd.getText().toString();
+        String email = user.getText().toString();
+        String password = pwd.getText().toString();
+        tilEmail.setErrorEnabled(false);
+        tilPwd.setErrorEnabled(false);
 
-        /*PONER LOS CAMPOS EN ROJO Y EL MENSAJE DE ERROR DEBAJO*/
-        if (email.equals("")){
-            Toast.makeText(MainActivity.this,  R.string.fallo_email_vacio, Toast.LENGTH_SHORT).show();
-            return;
-        }
+        Validador.validarFormatoEmail(tilEmail, errors);
+        Validador.validarCampoObligatorio(tilPwd, errors);
 
-        if (password.equals("")){
-            Toast.makeText(MainActivity.this,  R.string.fallo_passw_vacia, Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Intent intent = new Intent(MainActivity.this, DisplayMapActivity.class);
-                            startActivity(intent);
-
+        if(errors.isEmpty()) {
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                Intent intent = new Intent(MainActivity.this, DisplayMapActivity.class);
+                                startActivity(intent);
+                            }
                         }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            /*MIRA EN BASE DE DATOS*/
+                            progressBar.setVisibility(View.INVISIBLE);
+                            DatabaseReference ref = FirebaseDatabase.getInstance().getReference("/database/userData");
+                            ref.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    Boolean flag = false;
+                                    for(DataSnapshot ds : dataSnapshot.getChildren()) { //ds es una lista con todos los hijos de userData
+                                        if(ds.child("email").getValue().toString().equals(tilEmail.getEditText().getText().toString())) {
+                                            tilPwd.setError(getString(R.string.fallo_passw_incorrecta));
+                                            tilPwd.setErrorEnabled(true);
+                                            flag = true;
+                                        }
+                                    }
+
+                                    if(flag == false) {
+                                        Toast.makeText(MainActivity.this,  R.string.fallo_inicio, Toast.LENGTH_SHORT).show();
+                                        tilPwd.setError("Pepe");
+                                        tilEmail.setError("Pepe");
+                                        if (tilEmail.getChildCount() == 2) {
+                                            tilEmail.getChildAt(1).setVisibility(View.GONE);
+                                        }
+                                        if (tilPwd.getChildCount() == 2) {
+                                            tilPwd.getChildAt(1).setVisibility(View.GONE);
+                                        }
+                                        tilPwd.setErrorEnabled(true);
+                                        tilEmail.setErrorEnabled(true);
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                }
+                            });
                     }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        /*MIRA EN BASE DE DATOS*/
-                            //Existe el usuario -> Contraseña incorrecta
-                            //No existe el usuario -> Usuario o contraseña incorrectos (para no dar información)
-                        Toast.makeText(MainActivity.this,  R.string.fallo_inicio, Toast.LENGTH_SHORT).show();
-                    }
-                });
+            });
+        } else {
+            progressBar.setVisibility(View.INVISIBLE);
+            for(Map.Entry<String, TextInputLayout> entry : errors.entrySet()) {
+                entry.getValue().setError(entry.getKey());
+                entry.getValue().setErrorEnabled(true);
+            }
+        }
     }
 
     public void registro(View view){
@@ -201,5 +242,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         dialog.show();
+    }
+
+    public static Resources getCustomResources() {
+        return instance.getResources();
     }
 }

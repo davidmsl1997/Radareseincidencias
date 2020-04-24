@@ -15,7 +15,10 @@
     <string name="formato_email">El email debe tener un formato válido.</string>
     <string name="usuario_repetido1">El usuario</string>
     <string name="usuario_repetido2">ya existe.</string>
-
+    <string name="fallo_usuario">El campo usuario es obligatorio</string>
+    <string name="fallo_surname1">El campo Primer apellido es obligatorio</string>
+    <string name="fallo_surname2">El campo Segundo apellido es obligatorio</string>
+    <string name="fallo_email">El campo Email es obligatorio</string>
     <!-- PANTALLA PRINCIPAL-->
     <string name="email_hint"> Correo electrónico </string>
     <string name="pwd">Contraseña</string>
@@ -24,7 +27,9 @@
     <string name="olvida_pwd">He olvidado mi contraseña</string>
     <string name="fallo_inicio">Usuario o contraseña incorrectos.</string>
     <string name="fallo_email_vacio">El campo del email está vacío.</string>
+    <string name="fallo_email_incorrecto">El campo del email no es correcto.</string>
     <string name="fallo_passw_vacia">El campo de la contrasña está vacío.</string>
+    <string name="fallo_passw_incorrecta">Contraseña incorrecta</string>
     <string name="fallo_verificacion">El email introducido no está verificado.</string>
     <string name="exit">Para salir de la aplicación pulse de nuevo el botón de retorno.</string>
     <string name="radar1">Radar limitado a </string>
